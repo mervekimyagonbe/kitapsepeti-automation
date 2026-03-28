@@ -1,59 +1,89 @@
-# Kitapsepeti.com – Cypress E2E Test Otomasyonu
+
+
+# 🧪 Kitapsepeti.com – Cypress E2E Test Otomasyonu
 
 ## 📌 Proje Hakkında
-Kitapsepeti.com e-ticaret platformunun sepet ve ödeme süreçlerini kapsayan uçtan uca (E2E) test otomasyon projesidir.
+Bu proje, Kitapsepeti.com e-ticaret platformunun sepet ve ödeme süreçlerini test etmek amacıyla hazırlanmış uçtan uca (E2E) test otomasyon projesidir.  
+Amaç, kullanıcının alışveriş deneyimini sorunsuz ve güvenli şekilde tamamlayabildiğini doğrulamaktır.
+
+---
 
 ## 🧪 Test Edilen User Story'ler
-| User Story | Konu |
-|---|---|
+
+| User Story | Açıklama |
+|-----------|---------|
 | US01 | Kullanıcı Girişi |
 | US02 | Ürün Arama ve Listeleme |
-| US03 | Ürün Detay Sayfası ve Sepete Ekleme |
-| US04 | Sepet Yönetimi ve Kontrolü |
+| US03 | Ürün Detay ve Sepete Ekleme |
+| US04 | Sepet Yönetimi |
 | US05 | Ödeme ve Sipariş Onayı |
-| US06 | Misafir Olarak Satın Alma Akışı |
+| US06 | Misafir Olarak Satın Alma |
+
+---
 
 ## 🛠️ Kullanılan Teknolojiler
-- JavaScript
-- Cypress
-- Page Object Model (POM) mimarisi
+- JavaScript  
+- Cypress  
+- Page Object Model (POM)  
 
-## 📁 Klasör Yapısı
+---
 
+## 📁 Proje Yapısı
 
 kitapsepeti-cypress/
 ├── cypress/
-│   ├── e2e/          → Test dosyaları
-│   ├── pages/        → POM sınıfları
-│   ├── fixtures/     → Test verileri
-│   └── support/      → Yardımcı komutlar
-├── evidence/         → Ekran görüntüleri
+│   ├── e2e/        # Test dosyaları
+│   ├── pages/      # Page Object Model yapısı
+│   ├── fixtures/   # Test verileri
+│   └── support/    # Custom komutlar
+├── evidence/       # Ekran görüntüleri ve videolar
 └── cypress.config.js
 
+---
 
 ## ⚙️ Kurulum
 
-```bash
 npm install
 
+---
 
-🚀 Testleri Çalıştırma
+## 🚀 Testleri Çalıştırma
 
-# Headless mod
+Headless mod
+
 npx cypress run
 
-# Arayüz ile
+Arayüz ile
+
 npx cypress open
 
+---
 
-📊 Test Sonuçları
-	∙	Video çıktıları: https://drive.google.com/drive/folders/1yu1JQhejhsCZ2pISsUescM3_2Gi0bQUh?usp=drive_link
-	∙	Manuel Testler: https://docs.google.com/spreadsheets/d/1uee_BsurqkPWSUblX28IQ2FfNphz8iCB52aOHEOX1gc/edit?usp=sharing
-    .   Mocha Test Raporu: https://mervekimyagonbe.github.io/kitapsepeti-automation/
-👤 Geliştirici
-	∙	Merve GÖNBE
-	∙
+## 📊 Test Raporları ve Kanıtlar
 
+🔗 **Canlı Test Raporu (Mochawesome):**  
+👉 [🚀 Test Raporunu Görüntüle](https://mervekimyagonbe.github.io/kitapsepeti-automation/)
+
+📁 **Test Videoları:**  
+👉 [🎥 Videoları İzle](https://drive.google.com/drive/folders/1yu1JQhejhsCZ2pISsUescM3_2Gi0bQUh?usp=drive_link)
+
+📄 **Manuel Test Senaryoları:**  
+👉 [📑 Test Senaryolarını Görüntüle](https://docs.google.com/spreadsheets/d/1uee_BsurqkPWSUblX28IQ2FfNphz8iCB52aOHEOX1gc/edit?usp=sharing)
+
+---
+
+## ✅ Test Kapsamı
+- Pozitif test senaryoları  
+- Negatif test senaryoları  
+- Uçtan uca kullanıcı akışları  
+- UI doğrulama  
+- Sepet ve ödeme süreci testleri  
+
+---
+
+## 👩‍💻 Geliştirici
+
+**Merve Gönbe**  
 
 
 
