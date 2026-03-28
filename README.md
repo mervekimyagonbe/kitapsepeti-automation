@@ -30,23 +30,9 @@ Amaç, kullanıcının alışveriş deneyimini sorunsuz ve güvenli şekilde tam
 
 ---
 
+
 ## 📁 Proje Yapısı
-
-kitapsepeti-cypress/
-│
-├── cypress/
-│   ├── e2e/            # Test senaryoları
-│   ├── pages/          # Page Object Model dosyaları
-│   ├── fixtures/       # Test verileri
-│   ├── reports/        # HTML test raporları
-│   ├── screenshots/    # Hata ekran görüntüleri
-│   ├── videos/         # Test video kayıtları
-│   └── support/        # Custom komutlar
-│
-├── cypress.config.js
-├── package.json
-└── README.md
-
+![Proje Yapısı](docs/screenshots/testyapi.png)
 ---
 
 ## ⚙️ Kurulum
@@ -79,8 +65,7 @@ npx cypress open
 👉 [📑 Test Senaryolarını Görüntüle](https://docs.google.com/spreadsheets/d/1uee_BsurqkPWSUblX28IQ2FfNphz8iCB52aOHEOX1gc/edit?usp=sharing)
 
 ---
-## 📁 Proje Yapısı
-![Proje Yapısı](docs/screenshots/testyapi.png)
+
 
 ## 👩‍💻 Geliştirici
 
