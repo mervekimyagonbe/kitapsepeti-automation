@@ -3,7 +3,7 @@
 # 🧪 Kitapsepeti.com – Cypress E2E Test Otomasyonu
 
 ## 📌 Proje Hakkında
-Bu proje, Kitapsepeti.com e-ticaret platformunun sepet ve ödeme süreçlerini test etmek amacıyla hazırlanmış uçtan uca (E2E) test otomasyon projesidir.  
+Bu proje, Kitapsepeti.com e-ticaret platformunun giriş, sepet ve ödeme süreçlerini test etmek amacıyla hazırlanmış POM mimarisine sahip uçtan uca (E2E) test otomasyon projesidir.  
 Amaç, kullanıcının alışveriş deneyimini sorunsuz ve güvenli şekilde tamamlayabildiğini doğrulamaktır.
 
 ---
@@ -24,20 +24,28 @@ Amaç, kullanıcının alışveriş deneyimini sorunsuz ve güvenli şekilde tam
 ## 🛠️ Kullanılan Teknolojiler
 - JavaScript  
 - Cypress  
-- Page Object Model (POM)  
+- Page Object Model (POM)
+- Mochawesome
+- Node.js & npm
 
 ---
 
 ## 📁 Proje Yapısı
 
 kitapsepeti-cypress/
+│
 ├── cypress/
-│   ├── e2e/        # Test dosyaları
-│   ├── pages/      # Page Object Model yapısı
-│   ├── fixtures/   # Test verileri
-│   └── support/    # Custom komutlar
-├── evidence/       # Ekran görüntüleri ve videolar
-└── cypress.config.js
+│   ├── e2e/            # Test senaryoları
+│   ├── pages/          # Page Object Model dosyaları
+│   ├── fixtures/       # Test verileri
+│   ├── reports/        # HTML test raporları
+│   ├── screenshots/    # Hata ekran görüntüleri
+│   ├── videos/         # Test video kayıtları
+│   └── support/        # Custom komutlar
+│
+├── cypress.config.js
+├── package.json
+└── README.md
 
 ---
 
@@ -71,15 +79,8 @@ npx cypress open
 👉 [📑 Test Senaryolarını Görüntüle](https://docs.google.com/spreadsheets/d/1uee_BsurqkPWSUblX28IQ2FfNphz8iCB52aOHEOX1gc/edit?usp=sharing)
 
 ---
-
-## ✅ Test Kapsamı
-- Pozitif test senaryoları  
-- Negatif test senaryoları  
-- Uçtan uca kullanıcı akışları  
-- UI doğrulama  
-- Sepet ve ödeme süreci testleri  
-
----
+## 📁 Proje Yapısı
+![Proje Yapısı](docs/screenshots/testyapi.png)
 
 ## 👩‍💻 Geliştirici
 
