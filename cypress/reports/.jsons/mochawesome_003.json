@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-28T08:55:44.670Z",
+    "end": "2026-03-28T08:58:08.692Z",
+    "duration": 144022,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c34829d-5c8b-4850-a267-58e005f801e4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\US04_SepetYonetimi.cy.js",
+      "file": "cypress\\e2e\\US04_SepetYonetimi.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+          "title": "US04 - Sepet Yönetimi ve Kontrolü",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 - Sepet sayfasında ürün adı ve fiyat görüntülenmeli",
+              "fullTitle": "US04 - Sepet Yönetimi ve Kontrolü TC01 - Sepet sayfasında ürün adı ve fiyat görüntülenmeli",
+              "timedOut": null,
+              "duration": 20224,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US04_SepetYonetimi.cy.js\"\n}",
+              "code": "_CartPage.default.cartItems().first().within(() => {\n  cy.get('[class*=\"name\"], [class*=\"title\"]').should(\"be.visible\");\n  cy.get('[class*=\"price\"]').should(\"be.visible\");\n});",
+              "err": {},
+              "uuid": "63a9a59a-8324-4e34-b2ca-0fbf90600104",
+              "parentUUID": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC02 - Sepet toplamı ve genel toplam görüntülenmeli",
+              "fullTitle": "US04 - Sepet Yönetimi ve Kontrolü TC02 - Sepet toplamı ve genel toplam görüntülenmeli",
+              "timedOut": null,
+              "duration": 18704,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US04_SepetYonetimi.cy.js\"\n}",
+              "code": "_CartPage.default.totalPrice().should(\"be.visible\");\n_CartPage.default.getTotalPrice().then(text => {\n  expect(text).to.match(/\\d/);\n});",
+              "err": {},
+              "uuid": "ad4addd1-face-4f2f-88e6-32ea5a667ce5",
+              "parentUUID": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC03 - Ürün adedi artırılınca toplam güncellenmeli",
+              "fullTitle": "US04 - Sepet Yönetimi ve Kontrolü TC03 - Ürün adedi artırılınca toplam güncellenmeli",
+              "timedOut": null,
+              "duration": 19406,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US04_SepetYonetimi.cy.js\"\n}",
+              "code": "_CartPage.default.getTotalPrice().then(beforeTotal => {\n  _CartPage.default.clickIncrease();\n  _CartPage.default.getTotalPrice().should(afterTotal => {\n    expect(afterTotal).not.to.equal(beforeTotal);\n  });\n});",
+              "err": {},
+              "uuid": "21301b77-0970-4143-9d7f-791ad52efe21",
+              "parentUUID": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC04 - Ürün silinince sepetten kaldırılmalı",
+              "fullTitle": "US04 - Sepet Yönetimi ve Kontrolü TC04 - Ürün silinince sepetten kaldırılmalı",
+              "timedOut": null,
+              "duration": 19604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US04_SepetYonetimi.cy.js\"\n}",
+              "code": "_CartPage.default.clickDelete();\n_CartPage.default.confirmDelete();\n_CartPage.default.emptyCartMessage().should(\"be.visible\");",
+              "err": {},
+              "uuid": "66da6602-ed58-411c-a7fc-a19d4e8b7a9d",
+              "parentUUID": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC05 - Sepeti Temizle butonuyla tüm ürünler kaldırılmalı",
+              "fullTitle": "US04 - Sepet Yönetimi ve Kontrolü TC05 - Sepeti Temizle butonuyla tüm ürünler kaldırılmalı",
+              "timedOut": null,
+              "duration": 22711,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US04_SepetYonetimi.cy.js\"\n}",
+              "code": "_CartPage.default.clickClearCart();\n_CartPage.default.emptyCartMessage().should(\"be.visible\");",
+              "err": {},
+              "uuid": "764bef55-74fe-4b45-b095-6361e53f8fc4",
+              "parentUUID": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC06 - Sepette ürün varken Satın Al butonu görüntülenmeli",
+              "fullTitle": "US04 - Sepet Yönetimi ve Kontrolü TC06 - Sepette ürün varken Satın Al butonu görüntülenmeli",
+              "timedOut": null,
+              "duration": 19951,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US04_SepetYonetimi.cy.js\"\n}",
+              "code": "_CartPage.default.buyButton().should(\"be.visible\");",
+              "err": {},
+              "uuid": "368e5e23-6621-4c92-b2e2-1f0631571738",
+              "parentUUID": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC07 - Boş sepette mesaj ve buton görünmeli",
+              "fullTitle": "US04 - Sepet Yönetimi ve Kontrolü TC07 - Boş sepette mesaj ve buton görünmeli",
+              "timedOut": null,
+              "duration": 21130,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US04_SepetYonetimi.cy.js\"\n}",
+              "code": "_CartPage.default.clickDelete();\n_CartPage.default.confirmDelete();\n_CartPage.default.emptyCartMessage().should(\"be.visible\");\n_CartPage.default.continueShoppingButton().should(\"be.visible\");",
+              "err": {},
+              "uuid": "5e6e77e9-0672-46b0-92d0-790b95bc6783",
+              "parentUUID": "ed339d3b-a2aa-4b95-aa24-306d2f057b00",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63a9a59a-8324-4e34-b2ca-0fbf90600104",
+            "ad4addd1-face-4f2f-88e6-32ea5a667ce5",
+            "21301b77-0970-4143-9d7f-791ad52efe21",
+            "66da6602-ed58-411c-a7fc-a19d4e8b7a9d",
+            "764bef55-74fe-4b45-b095-6361e53f8fc4",
+            "368e5e23-6621-4c92-b2e2-1f0631571738",
+            "5e6e77e9-0672-46b0-92d0-790b95bc6783"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 141730,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

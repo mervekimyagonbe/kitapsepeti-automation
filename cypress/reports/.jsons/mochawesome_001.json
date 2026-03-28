@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-28T08:52:40.822Z",
+    "end": "2026-03-28T08:54:00.636Z",
+    "duration": 79814,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ad54cab6-5904-4123-a273-c6844b0708c3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\US02_UrunAramaListeleme.cy.js",
+      "file": "cypress\\e2e\\US02_UrunAramaListeleme.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c6a87f9-621d-468b-8809-8d0290145f25",
+          "title": "US02 - Ürün Arama ve Listeleme",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 - Geçerli kelimeyle arama yapılınca ürünler listelenmeli",
+              "fullTitle": "US02 - Ürün Arama ve Listeleme TC01 - Geçerli kelimeyle arama yapılınca ürünler listelenmeli",
+              "timedOut": null,
+              "duration": 10862,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US02_UrunAramaListeleme.cy.js\"\n}",
+              "code": "cy.fixture(\"testData\").then(data => {\n  _SearchPage.default.search(data.searchKeyword);\n  cy.url().should(\"include\", \"/arama\");\n  _SearchPage.default.productCards().should(\"have.length.greaterThan\", 0);\n});",
+              "err": {},
+              "uuid": "f80ec253-0fc6-4ab9-95b9-7479c3f09987",
+              "parentUUID": "1c6a87f9-621d-468b-8809-8d0290145f25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC02 - Sistemde olmayan kelimeyle arama yapılınca sonuç bulunmamalı",
+              "fullTitle": "US02 - Ürün Arama ve Listeleme TC02 - Sistemde olmayan kelimeyle arama yapılınca sonuç bulunmamalı",
+              "timedOut": null,
+              "duration": 8666,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US02_UrunAramaListeleme.cy.js\"\n}",
+              "code": "cy.fixture(\"testData\").then(data => {\n  _SearchPage.default.search(data.invalidKeyword);\n  // ürün kartları yok mu kontrol et\n  _SearchPage.default.productCards().should(\"have.length\", 0);\n});",
+              "err": {},
+              "uuid": "24a8dcde-35af-43e7-a9b4-f1fad0b12fae",
+              "parentUUID": "1c6a87f9-621d-468b-8809-8d0290145f25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC03 - Her ürün kartında ürün adı ve fiyat bilgisi görüntülenmeli",
+              "fullTitle": "US02 - Ürün Arama ve Listeleme TC03 - Her ürün kartında ürün adı ve fiyat bilgisi görüntülenmeli",
+              "timedOut": null,
+              "duration": 8406,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US02_UrunAramaListeleme.cy.js\"\n}",
+              "code": "cy.fixture(\"testData\").then(data => {\n  _SearchPage.default.search(data.searchKeyword);\n  _SearchPage.default.productCards().first().within(() => {\n    cy.get('[class*=\"name\"], [class*=\"title\"]').should(\"be.visible\");\n    cy.get('[class*=\"price\"]').should(\"be.visible\");\n  });\n});",
+              "err": {},
+              "uuid": "d5307417-df3a-450b-8fd5-8a2b88dcfbc4",
+              "parentUUID": "1c6a87f9-621d-468b-8809-8d0290145f25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC04 - Sıralama menüsü açılınca seçenekler görüntülenmeli",
+              "fullTitle": "US02 - Ürün Arama ve Listeleme TC04 - Sıralama menüsü açılınca seçenekler görüntülenmeli",
+              "timedOut": null,
+              "duration": 30103,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US02_UrunAramaListeleme.cy.js\"\n}",
+              "code": "cy.fixture(\"testData\").then(data => {\n  _SearchPage.default.search(data.searchKeyword);\n  _SearchPage.default.sortDropdown().select(\"Fiyat Artan\");\n  _SearchPage.default.sortDropdown().select(\"Fiyat Azalan\");\n  _SearchPage.default.sortDropdown().select(\"Yeniden Eskiye\");\n});",
+              "err": {},
+              "uuid": "564c6cbc-2aed-4296-8de9-30cd88a232e7",
+              "parentUUID": "1c6a87f9-621d-468b-8809-8d0290145f25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC05 - Boş arama çubuğuyla arama yapılınca sonuç sayfasına gidilmemeli",
+              "fullTitle": "US02 - Ürün Arama ve Listeleme TC05 - Boş arama çubuğuyla arama yapılınca sonuç sayfasına gidilmemeli",
+              "timedOut": null,
+              "duration": 7870,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US02_UrunAramaListeleme.cy.js\"\n}",
+              "code": "_SearchPage.default.searchButton().click();\ncy.url().should(\"not.include\", \"/arama\");",
+              "err": {},
+              "uuid": "b6e63b43-dbe3-44b8-b79c-0c908248b9c7",
+              "parentUUID": "1c6a87f9-621d-468b-8809-8d0290145f25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC06 - Filtre panelinde kategori seçilince sonuçlar güncellenmeli",
+              "fullTitle": "US02 - Ürün Arama ve Listeleme TC06 - Filtre panelinde kategori seçilince sonuçlar güncellenmeli",
+              "timedOut": null,
+              "duration": 12825,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\US02_UrunAramaListeleme.cy.js\"\n}",
+              "code": "cy.fixture(\"testData\").then(data => {\n  _SearchPage.default.search(data.searchKeyword);\n  _SearchPage.default.filterPanel().should(\"be.visible\");\n  _SearchPage.default.filterPanel().within(() => {\n    cy.contains(/kategori/i).should(\"be.visible\");\n    cy.contains(/marka/i).should(\"be.visible\");\n  });\n});",
+              "err": {},
+              "uuid": "098f9869-d5ab-4fa7-8e45-8467a5c97f83",
+              "parentUUID": "1c6a87f9-621d-468b-8809-8d0290145f25",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f80ec253-0fc6-4ab9-95b9-7479c3f09987",
+            "24a8dcde-35af-43e7-a9b4-f1fad0b12fae",
+            "d5307417-df3a-450b-8fd5-8a2b88dcfbc4",
+            "564c6cbc-2aed-4296-8de9-30cd88a232e7",
+            "b6e63b43-dbe3-44b8-b79c-0c908248b9c7",
+            "098f9869-d5ab-4fa7-8e45-8467a5c97f83"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 78732,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

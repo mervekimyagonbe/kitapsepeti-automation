@@ -1,0 +1,12 @@
+{
+  "validUser": {
+    "email": "test_kullanici@gmail.com",
+    "password": "Test1234!"
+  },
+  "invalidUser": {
+    "email": "yanlis@gmail.com",
+    "password": "WrongPass!"
+  },
+  "searchKeyword": "Harry Potter",
+  "invalidKeyword": "asdfgwert123"
+}
