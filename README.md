@@ -64,12 +64,6 @@ npx cypress open
 📄 **Manuel Test Senaryoları:**  
 👉 [📑 Test Senaryolarını Görüntüle](https://docs.google.com/spreadsheets/d/1uee_BsurqkPWSUblX28IQ2FfNphz8iCB52aOHEOX1gc/edit?usp=sharing)
 
----
-
-
-## 👩‍💻 Geliştirici
-
-**Merve Gönbe**  
 
 
 
